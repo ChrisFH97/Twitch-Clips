@@ -1,0 +1,30 @@
+$color-mercury: #e7e7e7;
+$color-purple: #6441A4;
+
+html,body{
+    margin:0;
+    padding:0;
+    background-color: $color-purple;
+}
+
+.Header{
+
+    padding: 3rem;
+    text-align: center;
+
+    &__search{
+        border: none;
+        display: block;
+        margin: 15px auto;
+        outline:none;
+        padding: 1rem;
+        width: 90%;
+    }
+
+    &__title{
+        color:white;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-size: 3vw;
+    }
+
+}
