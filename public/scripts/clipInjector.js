@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
  */
 function loadClipData(clips) {   
 
-    var xobj = new XMLHttpRequest();
+    let xobj = new XMLHttpRequest();
         xobj.overrideMimeType("application/json");
         xobj.open('GET', 'data', true);
         xobj.onreadystatechange = function () {
@@ -25,17 +25,17 @@ function loadClipData(clips) {
 }
 
 function populateClipContainer(clips){
-    for(var i = 0; i < clips.length; i++) {
-        var obj = clips[i];
-        var container = document.getElementById("container");
+    for(let i = 0; i < clips.length; i++) {
+        let obj = clips[i];
+        let container = document.getElementById("container");
         container.appendChild(createClipElement(obj));
     }
 }
 
 function createClipElement(obj){
-    var file = obj.download_url +"";
-    var fileE = file.split("/")[3]
-    var clip = document.createElement("article");
+    let file = obj.download_url +"";
+    let fileE = file.split("/")[3]
+    let clip = document.createElement("article");
     clip.setAttribute("class","container__clip")
     clip.setAttribute('data-title',obj.title)
     clip.setAttribute('data-author',obj.creator_name)
@@ -49,6 +49,5 @@ function createClipElement(obj){
     <h3 class="container__clip__subtitle">Clipped By <b>${obj.creator_name}</b></h3>
     <h3 class="container__clip__subtitle">Category: <b>${obj.game.name}</b></h3>
     `
-
     return clip;
 }
