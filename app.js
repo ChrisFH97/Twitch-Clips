@@ -8,6 +8,10 @@ app.get('/', (req, res) => {
   res.sendFile('index.html', { root: __dirname })
 })
 
+app.get('/data', (req, res) => {
+  res.sendFile('clips.json', { root: __dirname })
+})
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })

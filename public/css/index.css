@@ -1,19 +1,89 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: #6441A4; }
+  background-color: #6441A4;
+  font-family: "Noto Sans JP", sans-serif;
+}
 
 .Header {
   padding: 3rem;
-  text-align: center; }
-  .Header__search {
-    border: none;
+  text-align: center;
+}
+.Header__search {
+  border: none;
+  display: block;
+  margin: 15px auto;
+  outline: none;
+  padding: 1rem;
+  width: 90%;
+}
+.Header__title {
+  color: white;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 3vw;
+}
+
+.container {
+  transition: 0.25s all ease-in-out;
+  opacity: 1;
+}
+.container__clip {
+  background: #ffffff;
+  padding-bottom: 15px;
+  width: 31.3%;
+  margin: 1%;
+  float: left;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+}
+@media (max-width: 900px) {
+  .container__clip {
+    width: 48%;
+  }
+}
+@media (max-width: 514px) {
+  .container__clip {
     display: block;
-    margin: 15px auto;
-    outline: none;
-    padding: 1rem;
-    width: 90%; }
-  .Header__title {
-    color: white;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 3vw; }
+    width: 98%;
+  }
+}
+.container__clip figure {
+  height: 0;
+  padding-bottom: 60%;
+  margin: 0;
+}
+.container__clip img {
+  width: 100%;
+  opacity: 1;
+}
+.container__clip__title {
+  color: #555;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.25;
+  margin: 0 auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 5px 8px;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+  width: 90%;
+}
+.container__clip__subtitle {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 1.25;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 5px 8px;
+  margin: 0;
+  white-space: nowrap;
+}
